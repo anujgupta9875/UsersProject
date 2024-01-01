@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
+import { Card } from './'
 import { useNavigate } from "react-router-dom";
 const UserList = () => {
   const [users, setUsers] = useState([]);

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import playImage from '../assets/play.png';
-import pauseImage from '../assets/pause.png';
+import { PlayImage,PauseImage } from '../assets';
 
 const Clock = () => {
    
@@ -122,7 +121,7 @@ const Clock = () => {
               height={20}
               width={20}
               onClick={toggleStopwatch}
-              src={isRunning ? pauseImage : playImage}
+              src={isRunning ? PauseImage : PlayImage}
               alt="Play"
             />
           </div>

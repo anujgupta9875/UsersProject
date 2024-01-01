@@ -1,7 +1,6 @@
 import './css/App.css';
- import { BrowserRouter,Route,Routes} from "react-router-dom";
-import UserList from './components/UserList';
-import UserProfile from './components/UserProfile';
+import { BrowserRouter,Route,Routes} from "react-router-dom";
+import { UserList,UserProfile } from './components';
 
 
 function App() {

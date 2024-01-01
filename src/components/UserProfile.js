@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Card from "./Card";
-import Clock from "./Clock";
-import Back from '../assets/back.png';
+import { Card,Clock } from './'
+import { BackImage } from "../assets";
 
 
 const UserProfile = () => {
@@ -75,8 +74,8 @@ const UserProfile = () => {
               style={{paddingTop:3}}
               height={23}
               width={23}
-              src={Back}
-              alt="Play"
+              src={BackImage}
+              alt="Back"
               />
               <div>
                 <h3 className="m-0 textColor pt-5 pb-5 font18">{"Back"}</h3>
