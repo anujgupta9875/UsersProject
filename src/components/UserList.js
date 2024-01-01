@@ -18,8 +18,6 @@ const UserList = () => {
               `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`
             );
             const postsData = await postsResponse.json();
-
-            console.log("postsData",postsData)
             return { ...user, postCount: postsData.length };
           })
         );

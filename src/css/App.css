@@ -12,13 +12,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-.App-header {
+.app-header {
   background-color: var(--main-color);
   min-height: 100vh;
 }
@@ -32,7 +26,7 @@
   box-shadow: var(--box-shadow-color)
 }
 
-.App-baground{
+.app-background{
   background-color: var(--background-color);
 }
 .bgColor {

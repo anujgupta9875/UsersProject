@@ -29,7 +29,6 @@ const Clock = () => {
         try {
           const response = await fetch(`http://worldtimeapi.org/api/timezone/${selectedCountry}`);
           const data = await response.json();
-          console.log(data,data.datetime)
           setCountryTime(formatCountryTime(data.datetime));
         } catch (error) {
           console.error('Error fetching country time:', error);
@@ -56,6 +55,7 @@ const Clock = () => {
       }, 1000);
     }
     else if (countryTime && selectedCountry && isRunning) { 
+      setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
        interval = setInterval(() => {
         setCountryTime((prevTime) => {
           const [hours, minutes, seconds] = prevTime.split(':').map(Number);
@@ -77,7 +77,7 @@ const Clock = () => {
     setIsRunning(!isRunning);
   };
 
-  const onSelectContry = (e) => { 
+  const onSelectCountry = (e) => { 
     setSelectedCountry(e.target.value)
   }
 
@@ -99,7 +99,7 @@ const Clock = () => {
           className='font16 bgColor select textColor'
           id="countryDropdown"
           value={selectedCountry}
-            onChange={(e) => onSelectContry(e)}
+            onChange={(e) => onSelectCountry(e)}
           >  
           <option className='dropdown-options' value="">Select a country</option>
           {countries.map((country) => (
@@ -108,7 +108,7 @@ const Clock = () => {
             </option>
           ))}
           </select>
-        </div>
+      </div>
       <div className="body d-flex">
         <div className="text-center circle">
           <div>

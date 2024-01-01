@@ -5,7 +5,7 @@ import { UserList,UserProfile } from './components';
 
 function App() {
   return (
-    <div className="App App-baground App-header">
+    <div className="app-background app-header">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<UserList />}></Route>
