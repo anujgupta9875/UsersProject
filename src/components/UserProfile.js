@@ -127,7 +127,7 @@ const UserProfile = () => {
             </Card>
           </div>
         ))}
-        {showPopUp && <Popup title={selectedPost.title} body={selectedPost.body} userId={selectedPost.userId}/>}
+          ¸{showPopUp && <Popup title={selectedPost.title} body={selectedPost.body} userId={selectedPost.userId}/>}
         </div>
         </div>
     </>
